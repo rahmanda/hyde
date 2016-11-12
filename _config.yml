@@ -1,0 +1,41 @@
+# Site settings
+title: your website name
+email: your-email@domain.com
+description: >
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: ""
+url: "http://yourdomain.com"
+facebook_username: yourfacebookusername
+twitter_username: yourtwitterusername
+github_username:  yourgithubusername
+linkedin_username: yourlinkedinusername
+
+# Article settings
+name: your website name
+author: Your Name
+author_desc: >
+  Write your author description for your new site here. You can edit this
+  line in _config.yml. It will appear in every post you made.
+
+# Build settings
+gem:
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-paginate
+gems: [jekyll-paginate]
+markdown: kramdown
+paginate: 15
+paginate_path: "paginate/:num/"
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'license.md']
+
+# Jekyll archive setting
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: 'archive'
+  permalinks:
+    tag: '/tag/:name/'
+    category: '/category/:name/'

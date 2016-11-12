@@ -1,0 +1,6 @@
+_site
+.sass-cache
+_wireframe
+.bundle/
+.jekyll-metadata
+todo.md
