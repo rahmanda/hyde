@@ -7,14 +7,16 @@ description: >
   Google search results) and in your feed.xml site description.
 baseurl: ""
 url: "http://yourdomain.com"
+keywords: 'your, site, keyword, used, for, meta, keywords'
 facebook_username: yourfacebookusername
 twitter_username: yourtwitterusername
 github_username:  yourgithubusername
 linkedin_username: yourlinkedinusername
+google_site_verification: whatever
 
 # Article settings
 name: your website name
-author: Your Name
+author: Your Website Author
 author_desc: >
   Write your author description for your new site here. You can edit this
   line in _config.yml. It will appear in every post you made.
@@ -28,7 +30,14 @@ gems: [jekyll-paginate]
 markdown: kramdown
 paginate: 15
 paginate_path: "paginate/:num/"
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'license.md']
+exclude:
+  - README.md
+  - Gemfile.lock
+  - Gemfile
+  - license.md
+  - bower_components
+  - node_modules
+  - _js
 
 # Jekyll archive setting
 jekyll-archives:

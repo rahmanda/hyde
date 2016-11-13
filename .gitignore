@@ -4,3 +4,5 @@ _wireframe
 .bundle/
 .jekyll-metadata
 todo.md
+node_modules/
+bower_components/

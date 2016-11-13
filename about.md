@@ -2,14 +2,16 @@
 layout: page
 title: About
 permalink: /about/
+sitemap:
+  lastmod: 2014-05-12
+  priority: 1.0
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Ambercat adalah web yang berisikan berbagai macam artikel seputar teknologi pengembangan web, mulai dari desain hingga teknis pemogramannya. Untuk pemograman web, Ambercat cenderung fokus pada topik-topik yang berkaitan dengan Python, PHP dan Javascript. Sedangkan untuk desain, Ambercat tidak hanya memberikan artikel-artikel tentang teknisnya saja tapi juga masuk ke sisi estetika dan seninya.  
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+Ambercat dibuat dan dipelihara oleh Rahmanda Wibowo. Anda dapat menghubunginya melalui salah satu kontak berikut ini:  
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+- email: rahmandawibowo@gmail.com  
+- linkedin: https://id.linkedin.com/in/rahmandawibowo  
+- facebook: https://facebook.com/rahmanda.wibowo  
+- twitter: https://twitter.com/rahmandawibowo     

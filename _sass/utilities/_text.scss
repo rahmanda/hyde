@@ -1,0 +1,34 @@
+// =====================================================
+// Text Utilities
+// =====================================================
+
+$u-text-prefix: "u-text";
+
+.#{$u-text-prefix}--small {
+    font-size: map-get($theme-font-size, small);
+    line-height: map-get($theme-line-height, small);
+}
+
+.#{$u-text-prefix}--medium {
+    font-size: map-get($theme-font-size, medium);
+    line-height: map-get($theme-line-height, medium);
+}
+
+.#{$u-text-prefix}--large {
+    font-size: map-get($theme-font-size, large);
+    line-height: map-get($theme-line-height, large);
+}
+
+.#{$u-text-prefix}--x-large {
+    font-size: map-get($theme-font-size, x-large);
+    line-height: map-get($theme-line-height, x-large);
+}
+
+.#{$u-text-prefix}--xx-large {
+    font-size: map-get($theme-font-size, xx-large);
+    line-height: map-get($theme-line-height, xx-large);
+}
+
+.#{$u-text-prefix}--bold {
+    font-weight: bold;
+}

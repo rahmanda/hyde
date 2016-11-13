@@ -1,12 +1,21 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="viewport" content="width=device-width initial-scale=1">
+ 
+  <title>{% if page.title %}{% if page.type %}{{ page.title | append: " " | append: page.type | append: " | " | append: site.title }}{% else %}{{ page.title | append: " " | append: " | " | append: site.title }}{% endif %}{% else %}{{ site.title | append: " | " | append: site.tagline }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="keywords" content="{% if page.tags %}{% for tag in page.tags %}{% assign no_comma = forloop.last %}{{ tag }}{% unless no_comma %}{{', '}}{% endunless %}{% endfor %}{% else %}{{ site.keywords }}{% endif %}" />
+  <meta name="author" content="{{ site.author }}" />
+  <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}"/>
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/> 
+  <meta property="og:type" content="{{ site.name }}"/> 
+  <meta property="og:image" content="{% if page.feature_image %}{{ page.feature_image | prepend: 'img/' | prepend: site.asseturl | prepend: site.baseurl | prepend: site.url }}{% else %}{{ momo.png | prepend: site.asseturl | prepend: 'img/' | prepend: site.baseurl | prepend: site.url }}{% endif %}"/> 
+  <meta property="og:site_name" content="{{ site.name }}"/> 
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"/>
+  <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" media="screen">
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 </head>
