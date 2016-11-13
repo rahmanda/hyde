@@ -15,6 +15,7 @@ $button-prefix: "btn";
     font-size   : map-get($theme-font-size, medium);
     font-weight : $theme-button-font-weight;
     text-transform: capitalize;
+    text-decoration: none;
 
     letter-spacing : $theme-letter-spacing;
     word-spacing   : $theme-word-spacing;

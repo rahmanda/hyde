@@ -1,0 +1,60 @@
+// =====================================================
+// Topbar
+// =====================================================
+// "We style it because the built-in is suck"
+
+$topbar-prefix: "topbar" !default;
+
+.#{$topbar-prefix} {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: map-get($theme-color-topbar, background);
+    border-bottom: 1px solid map-get($theme-color-topbar, border);
+
+    &__title {
+        text-decoration: none;
+        font-size: map-get($theme-font-size, large);
+        line-height: 32px;
+        font-weight: map-get($theme-font-weight, super-bold);
+        color: map-get($theme-color-topbar, foreground);
+    }
+}
+
+.#{$topbar-prefix}-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+
+    &__item {
+        display: inline-block;
+    }
+
+    &__link {
+        box-sizing: border-box;
+        text-align: left;
+        font-size: map-get($theme-font-size, medium);
+        line-height: map-get($theme-font-size, medium);
+        font-weight: map-get($theme-font-weight, bold);
+        color: map-get($theme-color-topbar, link-default);
+        text-decoration: none;
+        padding: $theme-topbar-padding;
+        display: inline-block;
+
+        &.active {
+            color: map-get($theme-color-topbar, link-active);
+            border-bottom: 3px solid map-get($theme-color-topbar, foreground);
+        }
+
+        &.active:hover {
+            color: map-get($theme-color-topbar, link-active);
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: map-get($theme-color-topbar, link-hover);
+        }
+    }
+}

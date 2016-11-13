@@ -17,12 +17,27 @@ $bright-green: #60b044;
 $green: #569e3d;
 $deep-green: #5ca941;
 
+// ===========================================
+// Color - Another Theme - Need To Be Refactor
+// ===========================================
+$zomp: #43aa8b;
+$dark-zomp: #54b195;
+$jelly-bean: #db504a;
+$bitter-sweet: #ff6f59;
+$melon: #ffbdb3;
+$peach: #ffb0a4;
+$japanese-indigo: #254441;
+$timberwolf: #dcdbd1;
+$laurel-green: #b2b09b;
+$deep-laurel-green: #515047;
+$white-smoke: #f8f7f5;
+
 // -------------------------------------------
 // Super Global Color
 // -------------------------------------------
 
 $theme-color-text: $black;
-$theme-color-background: $white;
+$theme-color-background: $white-smoke;
 
 // -------------------------------------------
 // Component Color
@@ -30,13 +45,13 @@ $theme-color-background: $white;
 
 // Link
 $theme-color-link-cta-normal: (
-    dark: $red,
-    light: $bright-gray
+    dark: $zomp,
+    light: $laurel-green
 );
 
 $theme-color-link-cta-hover: (
-    dark: $bright-red,
-    light: $white
+    dark: $dark-zomp,
+    light: $deep-laurel-green
 );
 
 // Button
@@ -56,12 +71,12 @@ $theme-color-button-common-hover: (
 );
 
 $theme-color-button-cta-normal: (
-    background: $bright-green,
+    background: $zomp,
     foreground: $white
 );
 
 $theme-color-button-cta-hover: (
-    background: $green,
+    background: $dark-zomp,
     foreground: $white
 );
 
@@ -89,7 +104,8 @@ $theme-color-box-header-danger: (
 
 $theme-color-box-content: (
     background: $white,
-    foreground: $gray
+    foreground: $gray,
+    border: $timberwolf
 );
 
 
@@ -116,5 +132,46 @@ $theme-color-dropdown-item-hover: $bright-gray;
 // Sidebar
 $theme-color-sidebar-background: $bright-gray;
 
+// Topbar
+$theme-color-topbar: (
+    background: $white,
+    foreground: $zomp,
+    link-default: $laurel-green,
+    link-hover: $deep-laurel-green,
+    link-active: $zomp,
+    border: $timberwolf
+);
+
 // Quote
-$theme-color-quote-background: $bright-gray;
+$theme-color-quote-background: $bitter-sweet;
+$theme-color-quote: (
+    background: $peach,
+    foreground: $white
+);
+
+// Card
+$theme-color-card: (
+    background: $white,
+    foreground: $black,
+    link-default: $japanese-indigo,
+    link-hover: $dark-zomp,
+    border: $timberwolf,
+    date: $laurel-green
+);
+
+// Tag
+$theme-color-tag: (
+    background: $zomp,
+    foreground: $white,
+    hover: $dark-zomp
+);
+
+// Post
+$theme-color-post: (
+    background: $white,
+    foreground: $black,
+    title: $japanese-indigo,
+    border: $timberwolf,
+    link-default: $zomp,
+    link-hover: $dark-zomp
+);

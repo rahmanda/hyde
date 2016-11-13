@@ -6,22 +6,9 @@
 <body>
 
   {% include header.html %}
-  <div class="site-main">
-    <div class="site-content">
-      <div class="row">
-          {{ content }}
-      </div>
-    </div>
-      {% if paginator.total_pages > 1 %}
-      <div class="pagination-links">
-        {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="btn previous"><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Newer Posts</a>
-        {% endif %}
-        {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="btn next">Older Posts&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></a>
-        {% endif %}
-      </div>
-      {% endif %}
+  
+  <div class="container" style="margin-top: 62px;">
+    {{ content }}
   </div>
 
   {% include footer.html %}
@@ -29,4 +16,3 @@
 </body>
 
 </html>
-g

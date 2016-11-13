@@ -35,7 +35,7 @@ $box-prefix: "box" !default;
     }
 
     &__content {
-        border: 1px solid map-get($theme-color-box-header, foreground);
+        border: 1px solid map-get($theme-color-box-content, border);
         border-radius: $theme-border-radius;
 
         background: map-get($theme-color-box-content, background);

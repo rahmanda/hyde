@@ -1,23 +1,36 @@
 ---
 layout: default
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="row">
+  {% for post in paginator.posts %}
+  <div class="gr-4 gr-6--tablet gr-12--mobile">
+    <div class="card">
+      <div class="card__thumbnail">
+	<a href="{{ post.url }}">
+	  <img src="{% if post.feature_image %}{{ post.feature_image | prepend: 'img/' | prepend: site.asseturl }}{% else %}{{ post.feature_image | prepend: 'img/' | prepend: site.asseturl }}{% endif %}">
+	</a>
+      </div>
+      <a href="{{ post.url }}" class="card__title">{{ post.title }}</a>
+      <div class="card-info">
+	<span class="card-info__date"><i class="i-calendar"></i>&nbsp;&nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
+	<span class="card-info__tags">
+          {% for tag in post.tags %}
+          <a class="tag" href="{{ "/tag/" | prepend: site.baseurl | append: tag | append: "/" | downcase }}">{{ tag }}</a>
+          {% endfor %}
+	</span>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  
+  {% if paginator.total_pages > 1 %}
+  <div class="gr-12 paginator paginator--duo">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn--common paginator__prev"><i class="i-chevron-left"></i>&nbsp;&nbsp;Newer Posts</a>
+    {% endif %}
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn--common paginator__next">Older Posts&nbsp;&nbsp;<i class="i-chevron-right"></i></a>
+    {% endif %}
+  </div>
+  {% endif %}  
 </div>

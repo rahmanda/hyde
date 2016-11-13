@@ -32,6 +32,7 @@
 // Elements
 // -------------------------------------------
 
+@import "elements/figure";
 @import "elements/heading";
 @import "elements/html";
 @import "elements/images";
@@ -44,12 +45,17 @@
 
 @import "components/button";
 @import "components/box";
+@import "components/card";
 @import "components/dropdown";
 @import "components/field";
 @import "components/modal";
 @import "components/notification";
-@import "components/sidebar";
+@import "components/paginator";
+@import "components/post";
 @import "components/quote";
+@import "components/sidebar";
+@import "components/tag";
+@import "components/topbar";
 
 // -------------------------------------------
 // Utilities

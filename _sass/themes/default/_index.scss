@@ -13,6 +13,7 @@ $global-use-theme: true; // set to use theme
 @import "base/colors";
 @import "base/typography";
 @import "base/border";
+@import "base/syntax-highlighter";
 
 // -------------------------------------------
 // Components
@@ -20,8 +21,13 @@ $global-use-theme: true; // set to use theme
 
 @import "components/box";
 @import "components/button";
+@import "components/card";
 @import "components/field";
 @import "components/icon";
 @import "components/notification";
+@import "components/paginator";
+@import "components/post";
 @import "components/sidebar";
+@import "components/tag";
+@import "components/topbar";
 @import "components/quote";

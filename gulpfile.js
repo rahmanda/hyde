@@ -11,16 +11,16 @@ var argv        = require("yargs").argv;
 var chalk       = require("chalk");
 
 var ROOTPATH = "/";
-var SERVER   = "http://localhost:8000";
+var SERVER   = "http://localhost:4000";
 var PREFIX_PATH = {
   src: '',
   dist: ''
 };
 var PATH = {
   js     : {
-    entry: PREFIX_PATH.src + "/_js/app.js",
-    src:   PREFIX_PATH.src + "/_js/**/*.js",
-    dist:  PREFIX_PATH.dist + "/assets/js"
+    entry: PREFIX_PATH.src + "_js/app.js",
+    src:   PREFIX_PATH.src + "_js/**/*.js",
+    dist:  PREFIX_PATH.dist + "assets/js"
   }
 };
 

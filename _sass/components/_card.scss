@@ -1,0 +1,48 @@
+// =====================================================
+// Card
+// =====================================================
+// "We style it because the built-in is suck"
+
+$card-prefix: "card" !default;
+
+.#{$card-prefix} {
+    box-sizing: border-box;
+    padding: $theme-card-padding;
+    margin-bottom: $theme-card-margin;
+    background: map-get($theme-color-card, background);
+    border: 1px solid map-get($theme-color-card, border);
+    border-radius: 3px;
+
+    &__thumbnail {
+        margin-bottom: $theme-card-padding;
+    }
+
+    &__title {
+        display: block;
+        color: map-get($theme-color-card, link-default);
+        font-size: map-get($theme-font-size, large);
+        font-weight: map-get($theme-font-weight, bold);
+        line-height: map-get($theme-line-height, large);
+        text-decoration: none;
+        height: 54px;
+
+        &:hover {
+            cursor: pointer;
+            color: map-get($theme-color-card, link-hover);
+        }
+    }
+}
+
+.#{$card-prefix}-info {
+    @include clearfix;
+    display: block;
+
+    &__date {
+        float: left;
+        color: map-get($theme-color-card, date);
+    }
+
+    &__tags {
+        float: right;
+    }
+}

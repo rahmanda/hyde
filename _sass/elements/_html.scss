@@ -9,6 +9,7 @@ html {
     background-color: $theme-color-background;
     font-family: $theme-font-family;
     font-size: map-get($theme-font-size, medium);
+    font-weight: map-get($theme-font-weight, normal);
     line-height: map-get($theme-line-height, medium);
     letter-spacing: $theme-letter-spacing;
     overflow-y: scroll; // always show scrollbar
