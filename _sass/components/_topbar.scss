@@ -88,6 +88,10 @@ $topbar-prefix: "topbar" !default;
     .#{$topbar-prefix}-nav__link {
         display: block;
     }
+
+    &.is-active {
+        display: block;
+    }
 }
 
 }

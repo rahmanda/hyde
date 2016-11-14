@@ -1,12 +1,12 @@
 {% assign topbar_active = page.topbar_active %}
 
-<header class="topbar">
+<header class="topbar" id="navbar">
 
   <nav class="container">
     <div class="row">
       <div class="gr-3 gr-12--mobile">
 	<a class="topbar__title" href="/">{{ site.title }}</a>
-	<button class="btn btn--common topbar__menu-btn"><i class="i-navicon-round"></i></button>
+	<button class="btn btn--common topbar__menu-btn js-navbar-menu-btn"><i class="i-navicon-round"></i></button>
       </div>
 
       <div class="gr-9 hide--mobile">
@@ -21,7 +21,7 @@
       </div>
       
       <div class="gr-12">
-	<ul class="topbar-nav topbar-nav--full">
+	<ul class="topbar-nav topbar-nav--full js-navbar-menu">
 	  <li class="topbar-nav__item">
 	    <a class="topbar-nav__link {% if topbar_active == 'home' %}{{ 'active' }}{% endif %}" href="/">Home</a>
 	  </li>
