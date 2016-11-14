@@ -3,15 +3,15 @@ layout: default
 ---
 <div class="row">
   <div class="gr-9 gr-12--tablet gr-12--mobile">
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="post card" itemscope itemtype="http://schema.org/BlogPosting">
 
     <header>
-      <div class="post__feature-img">
-	<img src="{{ page.feature_image | prepend: 'img/' | prepend: site.asseturl }}">
+      <div class="card__thumbnail">
+	<img class="card__thumbnail__img" src="{{ page.feature_image | prepend: 'img/' | prepend: site.asseturl }}">
       </div>
-      <div class="post-meta u-mg-btm--small">
-	<span class="post-meta__date"><i class="i-calendar"></i>&nbsp;&nbsp;{{ page.date | date: "%b %-d, %Y" }}</span>
-	<span class="post-meta__tags">
+      <div class="card-info u-mg-btm--small">
+	<span class="card-info__date"><i class="i-calendar"></i>&nbsp;&nbsp;{{ page.date | date: "%b %-d, %Y" }}</span>
+	<span class="card-info__tags">
           {% for tag in page.tags %}
           <a class="tag" href="{{ "/tag/" | prepend: site.baseurl | append: tag | append: "/" | downcase }}">{{ tag }}</a>
           {% endfor %}
