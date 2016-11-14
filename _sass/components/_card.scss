@@ -24,12 +24,20 @@ $card-prefix: "card" !default;
         font-weight: map-get($theme-font-weight, bold);
         line-height: map-get($theme-line-height, large);
         text-decoration: none;
-        height: 54px;
 
         &:hover {
             cursor: pointer;
             color: map-get($theme-color-card, link-hover);
         }
+
+        &--fixed {
+            height: 54px;
+        }
+    }
+
+    &__content {
+        display: block;
+        margin-top: $theme-card-margin;
     }
 }
 

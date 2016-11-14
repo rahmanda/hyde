@@ -10,7 +10,7 @@ layout: default
 	  <img src="{% if post.feature_image %}{{ post.feature_image | prepend: 'img/' | prepend: site.asseturl }}{% else %}{{ post.feature_image | prepend: 'img/' | prepend: site.asseturl }}{% endif %}">
 	</a>
       </div>
-      <a href="{{ post.url }}" class="card__title">{{ post.title }}</a>
+      <a href="{{ post.url }}" class="card__title card__title--fixed">{{ post.title }}</a>
       <div class="card-info">
 	<span class="card-info__date"><i class="i-calendar"></i>&nbsp;&nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
 	<span class="card-info__tags">
@@ -23,14 +23,5 @@ layout: default
   </div>
   {% endfor %}
   
-  {% if paginator.total_pages > 1 %}
-  <div class="gr-12 paginator paginator--duo">
-    {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn--common paginator__prev"><i class="i-chevron-left"></i>&nbsp;&nbsp;Newer Posts</a>
-    {% endif %}
-    {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn--common paginator__next">Older Posts&nbsp;&nbsp;<i class="i-chevron-right"></i></a>
-    {% endif %}
-  </div>
-  {% endif %}  
+  {% include pagination.html %}
 </div>

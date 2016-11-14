@@ -439,7 +439,7 @@ Tweepy
 {% raw %}{% endblock %}{% endraw %}
 {% endhighlight %}  
 
-Kita bisa menggunakan fungsi Flask dan data yang dimasukkan lewat fungsi `render_template` di dalam tanda double braces`{{}}`. Misalnya fungsi `url_for()` untuk mendapatkan alamat url dengan memasukkan string nama fungsi `routing`. Bisa juga memanggil variabel session. Yang perlu diperhatikan adalah semua data (array) yang dilewatkan melalui fungsi `render_template` bisa ambil pada *template* yang bersangkutan. Misalkan pada fungsi `public_timeline()` di `tweepy.py`, kita melewatkan hasil kueri ke variabel `tweets`. Pada `timeline.html`, kita dapat mengakses variabel `tweets` dan melakukan `looping` terhadap variabel tersebut.  
+Kita bisa menggunakan fungsi Flask dan data yang dimasukkan lewat fungsi `render_template` di dalam tanda double braces `{% raw %}{{}}{% endraw %}`. Misalnya fungsi `url_for()` untuk mendapatkan alamat url dengan memasukkan string nama fungsi `routing`. Bisa juga memanggil variabel session. Yang perlu diperhatikan adalah semua data (array) yang dilewatkan melalui fungsi `render_template` bisa ambil pada *template* yang bersangkutan. Misalkan pada fungsi `public_timeline()` di `tweepy.py`, kita melewatkan hasil kueri ke variabel `tweets`. Pada `timeline.html`, kita dapat mengakses variabel `tweets` dan melakukan `looping` terhadap variabel tersebut.  
 
 ## *Static file*  
 Sebelumnya saya pernah menjelaskan bahwa *file-file* css dimasukkan pada folder `static`. Unduh *file* css di [sini](http://1drv.ms/1IyG79P), lalu masukkan ke folder `static`. 

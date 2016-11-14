@@ -25,6 +25,7 @@ $topbar-prefix: "topbar" !default;
 .#{$topbar-prefix}-nav {
     list-style: none;
     margin: 0;
+    margin-bottom: -1px;
     padding: 0;
     text-align: right;
 
