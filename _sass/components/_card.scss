@@ -30,15 +30,16 @@ $card-prefix: "card" !default;
         line-height: map-get($theme-line-height, large);
         text-decoration: none;
 
+        .#{$card-prefix}--fixed-title & {
+            display: block;
+            height: 2.6em;
+            overflow: hidden;
+            margin-bottom: $theme-card-padding;
+        }
+
         &:hover {
             cursor: pointer;
             color: map-get($theme-color-card, link-hover);
-        }
-
-        &--fixed {
-            display: block;
-            height: 54px;
-            overflow: hidden;
         }
     }
 

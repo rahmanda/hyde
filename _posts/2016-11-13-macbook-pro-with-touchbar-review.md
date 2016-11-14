@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Macbook Pro with Touchbar Review"
-feature_image: perlukah-preprocessor-css.png
 category: code
 tags: php laravel 
 comment: true

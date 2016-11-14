@@ -1,0 +1,13 @@
+<div class="card card--fixed-title u-flex-column u-h--292">
+  <div class="u-flex-1 u-flex-column">
+    <a href="{{ post.url }}" class="card__title">{{ post.title }}</a>
+  </div>
+  <div class="card-info u-flex-2">
+    <span class="card-info__date"><i class="i-calendar"></i>&nbsp;&nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
+    <span class="card-info__tags">
+      {% for tag in post.tags %}
+      <a class="tag" href="{{ "/tag/" | prepend: site.baseurl | append: tag | append: "/" | downcase }}">{{ tag }}</a>
+      {% endfor %}
+    </span>
+  </div>
+</div>

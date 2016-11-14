@@ -2,7 +2,7 @@
 // Grid Settings
 // ==============================================================
 
-@import "../../node_modules/gridle/sass/grid";
+@import "../../node_modules/gridle/sass/gridle/gridle";
 
 $gridle-setup: (
     context: 12,
@@ -10,11 +10,11 @@ $gridle-setup: (
 );
 
 $gridle-breakpoint-mobile: (
-    max-width: 480px
+    max-width: 767px
 );
 
 $gridle-breakpoint-tablet: (
-    min-width : 481px,
+    min-width : 768px,
     max-width : 1024px
 );
 
