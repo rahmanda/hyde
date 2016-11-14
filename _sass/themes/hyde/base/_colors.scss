@@ -16,6 +16,10 @@ $red: #d90429;
 $bright-green: #60b044;
 $green: #569e3d;
 $deep-green: #5ca941;
+
+// ===========================================
+// Color - Another Theme - Need To Be Refactor
+// ===========================================
 $zomp: #43aa8b;
 $dark-zomp: #54b195;
 $jelly-bean: #db504a;
@@ -139,6 +143,7 @@ $theme-color-topbar: (
 );
 
 // Quote
+$theme-color-quote-background: $bitter-sweet;
 $theme-color-quote: (
     background: $peach,
     foreground: $white

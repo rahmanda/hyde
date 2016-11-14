@@ -10,15 +10,15 @@ $theme-max-breakpoint: 1224px;
 $theme-box-enable: true;
 $theme-button-enable: true;
 $theme-card-enable: true;
-$theme-dropdown-enable: true;
-$theme-field-enable: true;
+$theme-dropdown-enable: false;
+$theme-field-enable: false;
 $theme-icon-enable: true;
-$theme-modal-enable: true;
-$theme-notif-enable: true;
+$theme-modal-enable: false;
+$theme-notif-enable: false;
 $theme-paginator-enable: true;
 $theme-post-enable: true;
 $theme-quote-enable: true;
-$theme-sidebar-enable: true;
+$theme-sidebar-enable: false;
 $theme-tag-enable: true;
 $theme-topbar-enable: true;
 $theme-tree-enable: true;
@@ -31,6 +31,7 @@ $theme-tree-enable: true;
 @import "base/typography";
 @import "base/border";
 @import "base/margin";
+@import "base/syntax-highlighter";
 
 // -------------------------------------------
 // Components
