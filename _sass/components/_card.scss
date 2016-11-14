@@ -6,6 +6,7 @@
 $card-prefix: "card" !default;
 
 .#{$card-prefix} {
+    @include clearfix;
     box-sizing: border-box;
     padding: $theme-card-padding;
     margin-bottom: $theme-card-margin;
@@ -18,7 +19,6 @@ $card-prefix: "card" !default;
     }
 
     &__title {
-        display: block;
         color: map-get($theme-color-card, link-default);
         font-size: map-get($theme-font-size, large);
         font-weight: map-get($theme-font-weight, bold);
@@ -31,13 +31,24 @@ $card-prefix: "card" !default;
         }
 
         &--fixed {
+            display: block;
             height: 54px;
+            overflow: hidden;
         }
     }
 
     &__content {
-        display: block;
         margin-top: $theme-card-margin;
+        position: relative;
+    }
+
+    &__category {
+        color: map-get($theme-color-card, category-default);
+
+        &:hover {
+            cursor: pointer;
+            color: map-get($theme-color-card, category-hover);
+        }
     }
 }
 
@@ -52,5 +63,12 @@ $card-prefix: "card" !default;
 
     &__tags {
         float: right;
+    }
+
+    &--bottom {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
     }
 }

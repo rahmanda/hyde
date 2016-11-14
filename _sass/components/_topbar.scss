@@ -9,6 +9,7 @@ $topbar-prefix: "topbar" !default;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
     width: 100%;
     background: map-get($theme-color-topbar, background);
     border-bottom: 1px solid map-get($theme-color-topbar, border);

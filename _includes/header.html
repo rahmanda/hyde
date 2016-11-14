@@ -1,3 +1,5 @@
+{% assign topbar_active = page.topbar_active %}
+
 <header class="topbar">
 
   <nav class="container">
@@ -8,17 +10,11 @@
 
       <ul class="topbar-nav gr-9">
 	<li class="topbar-nav__item">
-	  <a class="topbar-nav__link active">Home</a>
+	  <a class="topbar-nav__link {% if topbar_active == 'home' %}{{ 'active' }}{% endif %}" href="/">Home</a>
 	</li>
 	<li class="topbar-nav__item">
-	  <a class="topbar-nav__link">About</a>
+	  <a class="topbar-nav__link {% if topbar_active == 'about' %}{{ 'active' }}{% endif %}" href="/about">About</a>
 	</li>
-	<li class="topbar-nav__item">
-	  <a class="topbar-nav__link">Archives</a>
-	</li>
-	<li class="topbar-nav__item">
-	  <a class="topbar-nav__link">Contacts</a>
-	</li>      	
       </ul>
     </div>
   </nav>

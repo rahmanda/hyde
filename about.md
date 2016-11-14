@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+topbar_active: about
 sitemap:
   lastmod: 2014-05-12
   priority: 1.0
