@@ -7,7 +7,7 @@ topbar_active: home
     {% assign latest_post = paginator.posts[0] %}
     <div class="card">
       <div class="gr-7 gr-12--mobile gr-12--tablet card__thumbnail no-gutter-left">
-	<img src="{{ latest_post.feature_image | prepend: 'img/' | prepend: site.asseturl }}" />
+	<img class="card__thumbnail__img" src="{{ latest_post.feature_image | prepend: 'img/' | prepend: site.asseturl }}" />
       </div>
       <div class="gr-5 gr-12--mobile gr-12--tablet card__content no-gutter-right">
 	<div class="card-info u-mg-btm--medium">
@@ -28,7 +28,7 @@ topbar_active: home
 	<div class="card">
 	  <div class="card__thumbnail">
 	    <a href="{{ post.url }}">
-	      <img src="{% if post.feature_image %}{{ post.feature_image | prepend: 'img/' | prepend: site.asseturl }}{% else %}{{ post.feature_image | prepend: 'img/' | prepend: site.asseturl }}{% endif %}">
+	      <img class="card__thumbnail__img" src="{% if post.feature_image %}{{ post.feature_image | prepend: 'img/' | prepend: site.asseturl }}{% else %}{{ post.feature_image | prepend: 'img/' | prepend: site.asseturl }}{% endif %}">
 	    </a>
 	  </div>
 	  <a href="{{ post.url }}" class="card__title card__title--fixed">{{ post.title }}</a>
