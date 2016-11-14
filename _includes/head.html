@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width initial-scale=1">
  
-  <title>{% if page.title %}{% if page.type %}{{ page.title | append: " " | append: page.type | append: " | " | append: site.title }}{% else %}{{ page.title | append: " " | append: " | " | append: site.title }}{% endif %}{% else %}{{ site.title | append: " | " | append: site.tagline }}{% endif %}</title>
+  <title>{% if page.title %}{% if page.type %}{{ page.title | append: " " | append: page.type }}{% else %}{{ page.title | append: " " }}{% endif %}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="keywords" content="{% if page.tags %}{% for tag in page.tags %}{% assign no_comma = forloop.last %}{{ tag }}{% unless no_comma %}{{', '}}{% endunless %}{% endfor %}{% else %}{{ site.keywords }}{% endif %}" />
   <meta name="author" content="{{ site.author }}" />
