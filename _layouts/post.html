@@ -6,9 +6,11 @@ layout: default
   <article class="post card" itemscope itemtype="http://schema.org/BlogPosting">
 
     <header>
+      {% if page.feature_image %}
       <div class="card__thumbnail">
 	<img class="card__thumbnail__img" src="{{ page.feature_image | prepend: 'img/' | prepend: site.asseturl }}">
       </div>
+      {% endif %}
       <div class="card-info u-mg-btm--small">
 	<span class="card-info__date"><i class="i-calendar"></i>&nbsp;&nbsp;{{ page.date | date: "%b %-d, %Y" }}</span>
 	<span class="card-info__tags">
