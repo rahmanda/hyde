@@ -23,3 +23,7 @@ $u-text-post-variants: medium large x-large;
 .#{$u-text-prefix}--bold {
     font-weight: bold;
 }
+
+.#{$u-text-prefix}--op-3 {
+    opacity: .3;
+}

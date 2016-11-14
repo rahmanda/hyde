@@ -19,7 +19,7 @@ $topbar-prefix: "topbar" !default;
     border-bottom: 1px solid map-get($theme-color-topbar, border);
 
     @media screen and (max-width: $theme-max-breakpoint) {
-        padding: 0 20px;
+        padding: 5px 20px; // TODO: set to be configurable
     }
 
     &__title {
@@ -86,6 +86,10 @@ $topbar-prefix: "topbar" !default;
     }
 
     .#{$topbar-prefix}-nav__link {
+        display: block;
+    }
+
+    &.is-active {
         display: block;
     }
 }
