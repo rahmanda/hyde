@@ -5,6 +5,7 @@
 
 $card-prefix: "card" !default;
 
+@if ($theme-card-enable == true) {
 .#{$card-prefix} {
     @include clearfix;
     box-sizing: border-box;
@@ -53,22 +54,17 @@ $card-prefix: "card" !default;
 }
 
 .#{$card-prefix}-info {
-    @include clearfix;
+    position: relative;
     display: block;
 
     &__date {
-        float: left;
         color: map-get($theme-color-card, date);
     }
 
     &__tags {
-        float: right;
-    }
-
-    &--bottom {
         position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
+        top: 0;
+        right: 0;
     }
+}
 }

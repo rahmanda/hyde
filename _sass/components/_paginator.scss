@@ -5,6 +5,8 @@
 
 $paginator-prefix: "paginator" !default;
 
+@if ($theme-paginator-enable == true) {
+
 .#{$paginator-prefix} {
     @include clearfix;
     display: block;
@@ -17,4 +19,6 @@ $paginator-prefix: "paginator" !default;
     &__next {
         float: right;
     }
+}
+
 }

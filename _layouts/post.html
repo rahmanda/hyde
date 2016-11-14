@@ -2,15 +2,22 @@
 layout: default
 ---
 <div class="row">
-  <div class="gr-9">
+  <div class="gr-9 gr-12--tablet gr-12--mobile">
   <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
     <header>
       <div class="post__feature-img">
 	<img src="{{ page.feature_image | prepend: 'img/' | prepend: site.asseturl }}">
       </div>
+      <div class="post-meta u-mg-btm--small">
+	<span class="post-meta__date"><i class="i-calendar"></i>&nbsp;&nbsp;{{ page.date | date: "%b %-d, %Y" }}</span>
+	<span class="post-meta__tags">
+          {% for tag in page.tags %}
+          <a class="tag" href="{{ "/tag/" | prepend: site.baseurl | append: tag | append: "/" | downcase }}">{{ tag }}</a>
+          {% endfor %}
+	</span>
+      </div>      
       <h1 class="post__title" itemprop="name headline">{{ page.title }}</h1>
-      <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
     </header>
 
     <div class="post__body" itemprop="articleBody">
@@ -20,7 +27,7 @@ layout: default
   </article>
   </div>
 
-  <div class="gr-3">
+  <div class="gr-3 hide--tablet hide--mobile">
     {% include aside.html %}
   </div>
 </div>

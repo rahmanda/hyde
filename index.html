@@ -3,13 +3,13 @@ layout: default
 topbar_active: home
 ---
 <div class="row">
-  <div class="gr-9 gr-12--mobile">
+  <div class="gr-9 gr-12--tablet gr-12--mobile">
     {% assign latest_post = paginator.posts[0] %}
     <div class="card">
-      <div class="gr-7 gr-12--mobile card__thumbnail no-gutter-left">
+      <div class="gr-7 gr-12--mobile gr-12--tablet card__thumbnail no-gutter-left">
 	<img src="{{ latest_post.feature_image | prepend: 'img/' | prepend: site.asseturl }}" />
       </div>
-      <div class="gr-5 gr-12--mobile card__content no-gutter-right">
+      <div class="gr-5 gr-12--mobile gr-12--tablet card__content no-gutter-right">
 	<div class="card-info u-mg-btm--medium">
 	  <span class="card-info__date"><i class="i-calendar"></i>&nbsp;&nbsp;{{ latest_post.date | date: "%b %-d, %Y" }}</span>
 	  <span class="card-info__tags">
@@ -18,7 +18,7 @@ topbar_active: home
             {% endfor %}
 	  </span>
 	</div>	  	  
-	<h2 class="card__title u-text-post--x-large">{{ latest_post.title }}</h2>
+	<a class="card__title u-text-post--x-large" href="{{ latest_post.url }}">{{ latest_post.title }}</a>
       </div>
     </div>
     <div class="row">
@@ -47,7 +47,7 @@ topbar_active: home
       {% include pagination.html %}      
     </div>
   </div>
-  <div class="gr-3 hide--mobile">
+  <div class="gr-3 hide--tablet hide--mobile">
     {% include aside.html %}
   </div>
 </div>

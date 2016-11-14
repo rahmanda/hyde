@@ -5,6 +5,8 @@
 
 $tree-prefix: "tree" !default;
 
+@if ($theme-tree-enable == true) {
+
 .#{$tree-prefix} {
     list-style: none;
     margin: 0;
@@ -34,4 +36,6 @@ $tree-prefix: "tree" !default;
             color: map-get($theme-color-tree, list-hover);
         }
     }
+}
+
 }

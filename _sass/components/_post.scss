@@ -5,6 +5,8 @@
 
 $post-prefix: "post" !default;
 
+@if ($theme-post-enable == true) {
+
 .#{$post-prefix} {
     display: block;
     background: map-get($theme-color-post, background);
@@ -64,4 +66,20 @@ $post-prefix: "post" !default;
             color: map-get($theme-color-post, link-hover);
         }
     }
+}
+
+.#{$post-prefix}-meta {
+    @include clearfix;
+    display: block;
+
+    &__date {
+        float: left;
+        color: map-get($theme-color-post, date);
+    }
+
+    &__tags {
+        float: right;
+    }
+}
+
 }

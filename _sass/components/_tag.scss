@@ -5,6 +5,7 @@
 
 $tag-prefix: "tag" !default;
 
+@if ($theme-tag-enable == true) {
 .#{$tag-prefix} {
     display: inline-block;
     box-sizing: border-box;
@@ -22,4 +23,6 @@ $tag-prefix: "tag" !default;
         cursor: pointer;
         background: map-get($theme-color-tag, hover);
     }
+}
+
 }

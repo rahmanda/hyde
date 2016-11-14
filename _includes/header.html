@@ -4,18 +4,32 @@
 
   <nav class="container">
     <div class="row">
-      <div class="gr-3">
+      <div class="gr-3 gr-12--mobile">
 	<a class="topbar__title" href="/">{{ site.title }}</a>
+	<button class="btn btn--common topbar__menu-btn"><i class="i-navicon-round"></i></button>
       </div>
 
-      <ul class="topbar-nav gr-9">
-	<li class="topbar-nav__item">
-	  <a class="topbar-nav__link {% if topbar_active == 'home' %}{{ 'active' }}{% endif %}" href="/">Home</a>
-	</li>
-	<li class="topbar-nav__item">
-	  <a class="topbar-nav__link {% if topbar_active == 'about' %}{{ 'active' }}{% endif %}" href="/about">About</a>
-	</li>
-      </ul>
+      <div class="gr-9 hide--mobile">
+	<ul class="topbar-nav">
+	  <li class="topbar-nav__item">
+	    <a class="topbar-nav__link {% if topbar_active == 'home' %}{{ 'active' }}{% endif %}" href="/">Home</a>
+	  </li>
+	  <li class="topbar-nav__item">
+	    <a class="topbar-nav__link {% if topbar_active == 'about' %}{{ 'active' }}{% endif %}" href="/about">About</a>
+	  </li>
+	</ul>
+      </div>
+      
+      <div class="gr-12">
+	<ul class="topbar-nav topbar-nav--full">
+	  <li class="topbar-nav__item">
+	    <a class="topbar-nav__link {% if topbar_active == 'home' %}{{ 'active' }}{% endif %}" href="/">Home</a>
+	  </li>
+	  <li class="topbar-nav__item">
+	    <a class="topbar-nav__link {% if topbar_active == 'about' %}{{ 'active' }}{% endif %}" href="/about">About</a>
+	  </li>
+	</ul>
+      </div>
     </div>
   </nav>
 

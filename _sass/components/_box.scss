@@ -5,6 +5,8 @@
 
 $box-prefix: "box" !default;
 
+@if ($theme-box-enable == true) {
+
 .#{$box-prefix} {
     box-sizing: border-box;
     border-collapse: separate;
@@ -73,4 +75,6 @@ $box-prefix: "box" !default;
         background: map-get($theme-color-box-header-danger, background);
         color: $theme-color-background;
     }
+}
+
 }

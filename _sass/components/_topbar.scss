@@ -5,7 +5,11 @@
 
 $topbar-prefix: "topbar" !default;
 
+@if ($theme-topbar-enable == true) {
+
 .#{$topbar-prefix} {
+    @include clearfix;
+    box-sizing: border-box;
     position: fixed;
     top: 0;
     left: 0;
@@ -14,12 +18,25 @@ $topbar-prefix: "topbar" !default;
     background: map-get($theme-color-topbar, background);
     border-bottom: 1px solid map-get($theme-color-topbar, border);
 
+    @media screen and (max-width: $theme-max-breakpoint) {
+        padding: 0 20px;
+    }
+
     &__title {
         text-decoration: none;
         font-size: map-get($theme-font-size, large);
         line-height: 32px;
         font-weight: map-get($theme-font-weight, super-bold);
         color: map-get($theme-color-topbar, foreground);
+    }
+
+    &__menu-btn {
+        display: none;
+        float: right;
+
+        @include gridle_state(mobile) {
+            display: inline-block;
+        }
     }
 }
 
@@ -59,4 +76,18 @@ $topbar-prefix: "topbar" !default;
             color: map-get($theme-color-topbar, link-hover);
         }
     }
+}
+
+.#{$topbar-prefix}-nav--full {
+    display: none;
+
+    .#{$topbar-prefix}-nav__item {
+        display: block;
+    }
+
+    .#{$topbar-prefix}-nav__link {
+        display: block;
+    }
+}
+
 }

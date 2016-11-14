@@ -29,8 +29,10 @@ gem:
   - jekyll-paginate
 gems: [jekyll-paginate]
 markdown: kramdown
-paginate: 15
+paginate: 13
 paginate_path: "paginate/:num/"
+sass:
+  style: compressed
 exclude:
   - README.md
   - Gemfile.lock
