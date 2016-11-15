@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Macbook Pro with Touchbar Review"
-category: code
-tags: php laravel 
+category: technology
+tags: review
 comment: true
 sitemap:
   lastmod: 2016-09-11

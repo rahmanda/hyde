@@ -31,8 +31,6 @@ gems: [jekyll-paginate]
 markdown: kramdown
 paginate: 13
 paginate_path: "paginate/:num/"
-sass:
-  style: compressed
 exclude:
   - README.md
   - Gemfile.lock
@@ -41,6 +39,7 @@ exclude:
   - bower_components
   - node_modules
   - _js
+  - _sass
 
 # Jekyll archive setting
 jekyll-archives:

@@ -28,6 +28,8 @@ $post-prefix: "post" !default;
         line-height: map-get($theme-post-line-height, medium);
         font-weight: map-get($theme-font-weight, light);
 
+        // exception to throw element selector here
+
         h2 {
             font-size: map-get($theme-post-font-size, large);
             line-height: map-get($theme-post-line-height, large);
@@ -52,6 +54,12 @@ $post-prefix: "post" !default;
 
         a:hover {
             color: map-get($theme-color-post, link-hover);
+        }
+
+        blockquote {
+            margin-left: 0;
+            border-left: 3px solid map-get($theme-color-post, title);
+            padding-left: 1em;
         }
     }
 }

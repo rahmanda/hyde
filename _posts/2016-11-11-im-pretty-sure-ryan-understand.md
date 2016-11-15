@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "I’m pretty sure Speaker Ryan understands that the alliances of the GOP with Libertarians"
-category: code
-tags: php laravel 
+category: opinion
+tags: democratic
 comment: true
 sitemap:
   lastmod: 2016-11-13

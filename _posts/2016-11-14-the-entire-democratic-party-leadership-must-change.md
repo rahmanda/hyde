@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "The entire Democratic Party Leadership must change"
-feature_image: perlukah-preprocessor-css.png
-category: code
-tags: php laravel 
+feature_image: default-image.png
+category: opinion
+tags: politic 
 comment: true
 sitemap:
   lastmod: 2016-09-11

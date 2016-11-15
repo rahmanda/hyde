@@ -1,8 +1,11 @@
 var gulp        = require("gulp");
+var sass        = require("gulp-sass");
+var cssnano     = require("gulp-cssnano");
 var serve       = require("gulp-serve");
 var concat      = require("gulp-concat");
 var uglify      = require("gulp-uglify");
 var rename      = require("gulp-rename");
+var autoprefixer= require("gulp-autoprefixer");
 var browserSync = require("browser-sync").create();
 var source      = require("vinyl-source-stream");
 var buffer      = require("vinyl-buffer");
@@ -17,6 +20,11 @@ var PREFIX_PATH = {
   dist: ''
 };
 var PATH = {
+  sass   : {
+    entry: PREFIX_PATH.src + "_sass/app.scss",
+    src:   PREFIX_PATH.src + "_sass/**/*.scss",
+    dist:  PREFIX_PATH.dist + "css/"
+  },
   js     : {
     entry: PREFIX_PATH.src + "_js/app.js",
     src:   PREFIX_PATH.src + "_js/**/*.js",
@@ -25,16 +33,31 @@ var PATH = {
 };
 
 // Static server + watching asset files
-gulp.task('serve', ['browserify'], function() {
+gulp.task('serve', ['browserify', 'sass'], function() {
   var sync = argv.browserify ? argv.browserify : 'false';
   if (sync === 'true') {
     browserSync.init({
       proxy: SERVER
     });
+    gulp.watch(PATH.sass.src, ['sass']);
     gulp.watch(PATH.js.src, ['js-watch']);
   } else {
+    gulp.watch(PATH.sass.src, ['sass']);
     gulp.watch(PATH.js.src, ['browserify']);
   }
+});
+
+// Compile sass into CSS & auto-inject into browsers
+gulp.task('sass', function() {
+  return gulp.src(PATH.sass.src)
+    .pipe(sass({
+      includePaths: ['node_modules/gridle/sass', 'bower_components/Ionicons/scss']
+    }))
+    .pipe(autoprefixer())
+    .pipe(cssnano())
+    .pipe(rename('app.min.css'))    
+    .pipe(gulp.dest(PATH.sass.dist))
+    .pipe(browserSync.stream());
 });
 
 // Compile all js files into one file
