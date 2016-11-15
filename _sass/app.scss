@@ -1,68 +1,40 @@
 // ===========================================
-// Holy App File
+// Default Theme
 // ===========================================
-// Include all scss files here
-// Note: Pay attention to order
+// See how it has the same structure as main
+// framework?
 
-// -------------------------------------------
-// Tools - place it here because it may be used
-// by theme
-// -------------------------------------------
+$global-use-theme: true; // set to use theme
+$theme-max-breakpoint: 1224px;
 
-@import "tools/clearfix";
-@import "tools/button";
-@import "tools/border";
-@import "tools/field";
-
-// -------------------------------------------
-// Theme - need to be imported exactly here
-// and only need one at a time
-// -------------------------------------------
-
-@import "themes/hyde/index";
+// Exclude components you want to use
+$theme-box-enable: false;
+$theme-dropdown-enable: false;
+$theme-field-enable: false;
+$theme-modal-enable: false;
+$theme-notification-enable: false;
 
 // -------------------------------------------
 // Base
 // -------------------------------------------
 
-@import "base/normalize";
-@import "base/grid";
-
-// -------------------------------------------
-// Elements
-// -------------------------------------------
-
-@import "elements/figure";
-@import "elements/heading";
-@import "elements/html";
-@import "elements/images";
-@import "elements/text";
-
+@import "base/colors";
+@import "base/typography";
+@import "base/border";
+@import "base/margin";
 
 // -------------------------------------------
 // Components
 // -------------------------------------------
 
 @import "components/button";
-@import "components/box";
 @import "components/card";
-@import "components/dropdown";
-@import "components/field";
-@import "components/modal";
-@import "components/notification";
+@import "components/icon";
 @import "components/paginator";
 @import "components/post";
 @import "components/quote";
-@import "components/sidebar";
 @import "components/tag";
 @import "components/topbar";
 @import "components/tree";
 
-// -------------------------------------------
-// Utilities
-// -------------------------------------------
-
-@import "utilities/margin";
-@import "utilities/text";
-@import "utilities/height";
-@import "utilities/flex";
+@import "ayu";

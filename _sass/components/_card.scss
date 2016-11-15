@@ -1,76 +1,20 @@
-// =====================================================
+// ===========================================
+// Card - Default Theme
+// ==========================================
+
+$theme-card-padding: 15px;
+$theme-card-margin: map-get($theme-margin, medium);
+$theme-card-border-radius: $theme-border-radius;
+$theme-card-fixed-title-height: 2.6em;
+
 // Card
-// =====================================================
-// "We style it because the built-in is suck"
-
-$card-prefix: "card" !default;
-$theme-card-enable: false !default;
-
-@if ($theme-card-enable == true) {
-.#{$card-prefix} {
-    @include clearfix;
-    box-sizing: border-box;
-    padding: $theme-card-padding;
-    margin-bottom: $theme-card-margin;
-    background: map-get($theme-color-card, background);
-    border: 1px solid map-get($theme-color-card, border);
-    border-radius: $theme-card-border-radius;
-
-    &__thumbnail {
-        margin-bottom: $theme-card-padding;
-
-        &__img {
-            width: 100%;
-        }
-    }
-
-    &__title {
-        color: map-get($theme-color-card, link-default);
-        font-size: map-get($theme-font-size, large);
-        font-weight: map-get($theme-font-weight, bold);
-        line-height: map-get($theme-line-height, large);
-        text-decoration: none;
-
-        .#{$card-prefix}--fixed-title & {
-            display: block;
-            height: $theme-card-fixed-title-height;
-            overflow: hidden;
-            margin-bottom: $theme-card-padding;
-        }
-
-        &:hover {
-            cursor: pointer;
-            color: map-get($theme-color-card, link-hover);
-        }
-    }
-
-    &__content {
-        margin-top: $theme-card-margin;
-        position: relative;
-    }
-
-    &__category {
-        color: map-get($theme-color-card, category-default);
-
-        &:hover {
-            cursor: pointer;
-            color: map-get($theme-color-card, category-hover);
-        }
-    }
-}
-
-.#{$card-prefix}-info {
-    position: relative;
-    display: block;
-
-    &__date {
-        color: map-get($theme-color-card, date);
-    }
-
-    &__tags {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-}
-}
+$theme-color-card: (
+    background: $white,
+    foreground: $black,
+    link-default: $japanese-indigo,
+    link-hover: $dark-zomp,
+    border: $timberwolf,
+    date: $laurel-green,
+    category-default: $zomp,
+    category-hover: $dark-zomp
+);

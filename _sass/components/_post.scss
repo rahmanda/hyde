@@ -1,68 +1,38 @@
-// =====================================================
+// ===========================================
+// Post - Default Theme
+// ==========================================
+
+$theme-post-margin: map-get($theme-margin, medium);
+$theme-post-padding: map-get($theme-margin, medium);
+$theme-post-border-radius: $theme-border-radius;
+$theme-post-title-margin: map-get($theme-margin, medium);
+$theme-post-subtitle-margin: map-get($theme-margin, small);
+$theme-post-paragraph-margin: map-get($theme-margin, small);
+$theme-post-paragraph-text-align: justify;
+$theme-post-blockquote-border-width: 3px;
+$theme-post-blockquote-padding-left: 1em;
+
+
+$theme-post-font-size: (
+    medium: 21px,
+    large: 32px,
+    x-large: 40px
+);
+
+$theme-post-line-height: (
+    medium: 1.5,
+    large: 1.2,
+    x-large: 1.2
+);
+
 // Post
-// =====================================================
-// "We style it because the built-in is suck"
-
-$post-prefix: "post" !default;
-$theme-post-enable: false !default;
-
-@if ($theme-post-enable == true) {
-
-.#{$post-prefix} {
-    display: block;
-    background: map-get($theme-color-post, background);
-    color: map-get($theme-color-post, foreground);
-    margin-bottom: $theme-post-margin;
-
-    &__title {
-        display: block;
-        font-size: map-get($theme-post-font-size, x-large);
-        line-height: map-get($theme-post-line-height, x-large);
-        font-weight: map-get($theme-font-weight, super-bold);
-        color: map-get($theme-color-post, title);
-        margin-bottom: $theme-post-title-margin;
-    }
-
-    &__body {
-        display: block;
-        font-size: map-get($theme-post-font-size, medium);
-        line-height: map-get($theme-post-line-height, medium);
-        font-weight: map-get($theme-font-weight, light);
-
-        // exception to throw element selector here
-
-        h2 {
-            font-size: map-get($theme-post-font-size, large);
-            line-height: map-get($theme-post-line-height, large);
-            font-weight: map-get($theme-font-weight, bold);
-            color: map-get($theme-color-post, title);
-            margin-top: map-get($theme-post-font-size, large);
-            margin-bottom: $theme-post-subtitle-margin;
-        }
-
-        h2:first-child {
-            margin-top: 0;
-        }
-
-        p {
-            text-align: $theme-post-paragraph-text-align;
-            margin-bottom: map-get($theme-post-font-size, medium);
-        }
-
-        a {
-            color: map-get($theme-color-post, link-default);
-        }
-
-        a:hover {
-            color: map-get($theme-color-post, link-hover);
-        }
-
-        blockquote {
-            margin-left: 0;
-            border-left: $theme-post-blockquote-border-width solid map-get($theme-color-post, blockquote);
-            padding-left: $theme-post-blockquote-padding-left;
-        }
-    }
-}
-
-}
+$theme-color-post: (
+    background: $white,
+    foreground: $black,
+    title: $japanese-indigo,
+    blockquote: $japanese-indigo,
+    border: $timberwolf,
+    link-default: $zomp,
+    link-hover: $dark-zomp,
+    date: $laurel-green
+);
