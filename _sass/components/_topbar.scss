@@ -18,9 +18,15 @@ $topbar-prefix: "topbar" !default;
     background: map-get($theme-color-topbar, background);
     border-bottom: 1px solid map-get($theme-color-topbar, border);
 
-    @media screen and (max-width: $theme-max-breakpoint) {
+    // scss-lint:disable  NameFormat
+    @include gridle_state(tablet) {
+        padding: 0 20px; // TODO: set to be configurable
+    }
+
+    @include gridle_state(mobile) {
         padding: 5px 20px; // TODO: set to be configurable
     }
+    // scss-lint:enable NameFormat
 
     &__title {
         text-decoration: none;
@@ -34,9 +40,11 @@ $topbar-prefix: "topbar" !default;
         display: none;
         float: right;
 
+        // scss-lint:disable  NameFormat
         @include gridle_state(mobile) {
             display: inline-block;
         }
+        // scss-lint:enable NameFormat
     }
 }
 
