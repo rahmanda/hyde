@@ -4,6 +4,7 @@
 // "We style it because the built-in is suck"
 
 $sidebar-prefix: "sidebar" !default;
+$theme-sidebar-enable: false !default;
 
 @if ($theme-sidebar-enable == true) {
 

@@ -4,6 +4,7 @@
 // "We style it because the built-in is suck"
 
 $button-prefix: "btn";
+$theme-button-enable: false !default;
 
 @if ($theme-button-enable == true) {
 
@@ -15,14 +16,14 @@ $button-prefix: "btn";
 
     font-family : $theme-font-family;
     font-size   : map-get($theme-font-size, medium);
-    font-weight : $theme-button-font-weight;
-    text-transform: capitalize;
+    font-weight : map-get($theme-font-weight, bold);
+    text-transform: $theme-button-text-transform;
     text-decoration: none;
 
     letter-spacing : $theme-letter-spacing;
     word-spacing   : $theme-word-spacing;
 
-    margin  : 0;
+    margin  : $theme-button-margin;
 
     position : relative;
 

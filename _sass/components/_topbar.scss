@@ -4,34 +4,37 @@
 // "We style it because the built-in is suck"
 
 $topbar-prefix: "topbar" !default;
+$theme-topbar-enable: false !default;
 
 @if ($theme-topbar-enable == true) {
 
 .#{$topbar-prefix} {
     @include clearfix;
+    @include border(0 0 $theme-topbar-border-width,
+                    solid,
+                    map-get($theme-color-topbar, border));
     box-sizing: border-box;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: $theme-topbar-z-index;
     width: 100%;
     background: map-get($theme-color-topbar, background);
-    border-bottom: 1px solid map-get($theme-color-topbar, border);
 
     // scss-lint:disable  NameFormat
     @include gridle_state(tablet) {
-        padding: 0 20px; // TODO: set to be configurable
+        padding: $theme-topbar-padding-tablet;
     }
 
     @include gridle_state(mobile) {
-        padding: 5px 20px; // TODO: set to be configurable
+        padding: $theme-topbar-padding-mobile; // TODO: set to be configurable
     }
     // scss-lint:enable NameFormat
 
     &__title {
         text-decoration: none;
         font-size: map-get($theme-font-size, large);
-        line-height: 32px;
+        line-height: $theme-topbar-title-line-height;
         font-weight: map-get($theme-font-weight, super-bold);
         color: map-get($theme-color-topbar, foreground);
     }
@@ -51,7 +54,7 @@ $topbar-prefix: "topbar" !default;
 .#{$topbar-prefix}-nav {
     list-style: none;
     margin: 0;
-    margin-bottom: -1px;
+    margin-bottom: -1 * $theme-topbar-border-width;
     padding: 0;
     text-align: right;
 
@@ -71,8 +74,10 @@ $topbar-prefix: "topbar" !default;
         display: inline-block;
 
         &.active {
+            @include border(0 0 $theme-topbar-link-active-border-width,
+                            solid,
+                            map-get($theme-color-topbar, foreground));
             color: map-get($theme-color-topbar, link-active);
-            border-bottom: 3px solid map-get($theme-color-topbar, foreground);
         }
 
         &.active:hover {

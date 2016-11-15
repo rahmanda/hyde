@@ -4,6 +4,7 @@
 // "We style it because the built-in is suck"
 
 $paginator-prefix: "paginator" !default;
+$theme-paginator-enable: false !default;
 
 @if ($theme-paginator-enable == true) {
 

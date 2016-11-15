@@ -7,18 +7,13 @@
 $global-use-theme: true; // set to use theme
 $theme-max-breakpoint: 1224px;
 
-$theme-box-enable: false;
+// List all components you want to use
 $theme-button-enable: true;
 $theme-card-enable: true;
-$theme-dropdown-enable: false;
-$theme-field-enable: false;
 $theme-icon-enable: true;
-$theme-modal-enable: false;
-$theme-notif-enable: false;
 $theme-paginator-enable: true;
 $theme-post-enable: true;
 $theme-quote-enable: true;
-$theme-sidebar-enable: false;
 $theme-tag-enable: true;
 $theme-topbar-enable: true;
 $theme-tree-enable: true;
@@ -37,16 +32,12 @@ $theme-tree-enable: true;
 // Components
 // -------------------------------------------
 
-@import "components/box";
 @import "components/button";
 @import "components/card";
-@import "components/field";
 @import "components/icon";
-@import "components/notification";
 @import "components/paginator";
 @import "components/post";
 @import "components/quote";
-@import "components/sidebar";
 @import "components/tag";
 @import "components/topbar";
 @import "components/tree";

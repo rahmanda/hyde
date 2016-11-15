@@ -4,6 +4,7 @@
 // "We style it because the built-in is suck"
 
 $dropdown-prefix: "dropdown" !default;
+$theme-dropdown-enable: false !default;
 $dropdown-font-size: map-get($theme-font-size, medium) !default;
 $dropdown-item-margin-hz: -1 * calc-button-padding-hz($dropdown-font-size);
 

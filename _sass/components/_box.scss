@@ -4,6 +4,7 @@
 // "We style it because the built-in is suck"
 
 $box-prefix: "box" !default;
+$theme-box-enable: false !default;
 
 @if ($theme-box-enable == true) {
 

@@ -4,6 +4,7 @@
 // "We style it because the built-in is suck"
 
 $card-prefix: "card" !default;
+$theme-card-enable: false !default;
 
 @if ($theme-card-enable == true) {
 .#{$card-prefix} {
@@ -13,7 +14,7 @@ $card-prefix: "card" !default;
     margin-bottom: $theme-card-margin;
     background: map-get($theme-color-card, background);
     border: 1px solid map-get($theme-color-card, border);
-    border-radius: 3px;
+    border-radius: $theme-card-border-radius;
 
     &__thumbnail {
         margin-bottom: $theme-card-padding;
@@ -32,7 +33,7 @@ $card-prefix: "card" !default;
 
         .#{$card-prefix}--fixed-title & {
             display: block;
-            height: 2.6em;
+            height: $theme-card-fixed-title-height;
             overflow: hidden;
             margin-bottom: $theme-card-padding;
         }
